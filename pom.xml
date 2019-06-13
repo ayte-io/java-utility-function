@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ulysses</artifactId>
+        <groupId>io.ayte</groupId>
+        <version>0.2.5</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.ayte.utility.function</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>Ayte :: Utility :: Function</name>
+    <description>Set of boilerplate implementations for java.util.function.Function</description>
+    <url>https://github.com/ayte-io/java-utility-function</url>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>src/api</module>
+        <module>src/kit</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.ayte.utility.predicate</groupId>
+                <artifactId>kit</artifactId>
+                <version>0.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.ayte.utility.supplier</groupId>
+                <artifactId>kit</artifactId>
+                <version>0.1.2</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
